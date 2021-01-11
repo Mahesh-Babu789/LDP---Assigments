@@ -1,0 +1,16 @@
+var books = [];
+var answer ;
+answer= prompt("What is your favorite adventure book?"); 
+books.push(answer); 
+answer = prompt("What is your favorite romance book?"); 
+books.push(answer); 
+answer = prompt("What is your favorite drama book?"); 
+books.push(answer); 
+answer = prompt("What is your favorite gastronomic book?");
+books.push(answer);
+answer = prompt("What is your favorite zoology book?");
+books.push(answer);
+answer = prompt("What is your favorite philosophy book?");
+books.unshift(answer);
+books.pop();
+console.log(books);
