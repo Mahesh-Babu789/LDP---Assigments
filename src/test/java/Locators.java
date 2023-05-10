@@ -8,8 +8,6 @@ public class Locators {
 
     public static void main(String[] args) throws Exception {
 
-
-        System.setProperty("webdriver.chrome.driver", "/home/maheshk/Documents/chromedriver_linux64/chromedriver");
         WebDriver driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
