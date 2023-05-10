@@ -5,8 +5,7 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-public class UpdatedDropdown {
-
+public class e2e {
     public static void main(String[] args) throws InterruptedException {
 
         WebDriver driver = new ChromeDriver();
@@ -18,9 +17,15 @@ public class UpdatedDropdown {
         driver.findElement(By.xpath("//a[@value='BLR']")).click();
         Thread.sleep(2000);
         driver.findElement(By.xpath("(//a[@value='MAA'])[2]")).click();
-//        driver.findElement(By.id("divpaxinfo")).click();
         Thread.sleep(2000);
         driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight")).click();
+        if (driver.findElement(By.id("Div1")).getAttribute("style").contains("0.5")) {
+            Assert.assertTrue(true);
+        } else
+        {
+            Assert.assertTrue(false);
+        }
+        driver.findElement(By.id("divpaxinfo")).click();
         int i = 0;
         while (i < 5) {
             driver.findElement(By.id("hrefIncAdt")).click();
@@ -28,6 +33,8 @@ public class UpdatedDropdown {
         }
         driver.findElement(By.id("btnclosepaxoption")).click();
         Assert.assertEquals(driver.findElement(By.id("divpaxinfo")).getText(), (i + 1) + " Adult");
+        driver.findElement(By.id("ctl00_mainContent_chk_friendsandfamily")).click();
+        driver.findElement(By.id("ctl00_mainContent_btn_FindFlights")).click();
         driver.close();
     }
 }
