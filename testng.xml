@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/home/maheshk/LDP---Assigments/src/test/java/TestNGPractice1.java">
+        <classes>
+            <class name="TestNGPractice1">
+                <methods>
+                    <exclude name="Web.*"></exclude>
+                </methods>
+            </class>
+            <class name="TestNGPractice2">
+                <methods>
+                    <include name="Mobile.*"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

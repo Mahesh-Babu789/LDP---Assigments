@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="TestNGListeners"></listener>
+    </listeners>
+    <parameter name="URL" value="https://rahulshettyacademy.com/practice-project"></parameter>
+    <test verbose="2" preserve-order="true" name="Regression">
+        <groups>
+            <run>
+                <exclude name="smoke"></exclude>
+            </run>
+        </groups>
+        <classes>
+            <class name="TestNGPractice1"></class>
+            <class name="TestNGPractice2"></class>
+            <class name="TestNGPractice3"></class>
+        </classes>
+    </test>
+</suite>
