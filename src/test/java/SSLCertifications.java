@@ -22,7 +22,7 @@ public class SSLCertifications {
 
         ChromeOptions options = new ChromeOptions();
 
-        // if you want to pass a proxy orgument we need to create a proxy ref variable using proxy class
+        // if you want to pass a proxy argument we need to create a proxy ref variable using proxy class
         // https://chromedriver.chromium.org/capabilities
 
 //        Proxy proxy = new Proxy();
@@ -52,6 +52,9 @@ public class SSLCertifications {
         driver.manage().window().maximize();
         driver.get("https://rahulshettyacademy.com/AutomationPractice/");
         List<WebElement> links = driver.findElements(By.cssSelector("li[class='gf-li'] a"));
+
+        // soft assertions
+
         SoftAssert  a = new SoftAssert();
 
         for (WebElement link: links) {

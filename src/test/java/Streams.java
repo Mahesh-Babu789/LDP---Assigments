@@ -120,6 +120,8 @@ public class Streams {
             }
         }while(price.size()<1);
     }
+
+        // It simply conveys elements from a source such as a data structure, an array, or an I/O channel, through a pipeline of computational operations
         private static String getPriceVeggies(WebElement s) {
             String priceValue = s.findElement(By.xpath("following-sibling::td[1]")).getText();
             return priceValue;
